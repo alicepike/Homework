@@ -32,6 +32,12 @@ class sentenceUi
 
 			puts("This is your sentence: #{sentence_content}")
 
+		elsif answer == "l"
+
+
+		else 
+			puts("Sorry I cannot give you a sentence!")
+
 		end
 	end
 end
