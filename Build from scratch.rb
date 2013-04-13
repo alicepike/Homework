@@ -9,6 +9,18 @@ class sentenceUi
 			create and store (s) a sentence or retrieve (r) a sentence?")
 
 		answer = gets().chomp().downcase()
+
+		if answer == "s"
+			puts("Sentence Name")
+			sentence_name = gets().chomp()
+
+			puts("Sentence Content")
+			sentence_content = gets().chomp()
+
+			sentence = Sentence.new(sentence_name,sentence_content)
+			@store.add(sentence)
+
+			puts("The sentence #{sentence.name()} has been stored!")
 	end
 end
 
