@@ -1,5 +1,15 @@
 
 class sentenceUi
+	def initialize(sentence_store,io)
+		@store = sentence_store
+		@io = io
+	end
+	def main_request
+		@io.puts("Welcome to sentence master, would you like to 
+			create and store (s) a sentence or retrieve (r) a sentence?")
+
+		answer = gets().chomp().downcase()
+	end
 end
 
 class sentenceStore
