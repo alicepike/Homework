@@ -6,7 +6,7 @@ class sentenceUi
 	end
 	def main_request
 		@io.puts("Welcome to sentence master, would you like to 
-			create and store (s) a sentence or retrieve (r) a sentence?")
+			create and store (s) a sentence, retrieve (r) a sentence or list (l) all existing sentences?")
 
 		answer = gets().chomp().downcase()
 
@@ -21,6 +21,15 @@ class sentenceUi
 			@store.add(sentence)
 
 			puts("The sentence #{sentence.name()} has been stored!")
+
+		elsif answer == "r" 
+			puts("Sentence Name")
+			sentence_name = gets().chomp()
+
+			unless Sentence.retrieve(sentence_name)
+				abort("Sorry, this sentence does not exist!")
+			end
+		end
 	end
 end
 
