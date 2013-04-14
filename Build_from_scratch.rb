@@ -33,6 +33,16 @@ class sentenceUi
 			puts("This is your sentence: #{sentence_content}")
 
 		elsif answer == "l"
+			def show_sentence_list(sentence)
+
+			end
+
+			new_sentence = Sentence.new()
+			puts("#{new_sentence}")
+
+			unless new_sentence = nil
+				abort("There are no sentences available to print!")
+			end
 
 
 		else 
