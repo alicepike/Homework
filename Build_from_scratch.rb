@@ -29,6 +29,25 @@ class sentenceUi
 			unless Sentence.retrieve(sentence_name)
 				abort("Sorry, this sentence does not exist!")
 			end
+
+			puts("This is your sentence: #{sentence_content}")
+
+		elsif answer == "l"
+			def show_sentence_list(sentence)
+
+			end
+
+			new_sentence = Sentence.new()
+			puts("#{new_sentence}")
+
+			unless new_sentence = nil
+				abort("There are no sentences available to print!")
+			end
+
+
+		else 
+			puts("Sorry I cannot give you a sentence!")
+
 		end
 	end
 end
